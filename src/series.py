@@ -27,7 +27,7 @@ def lucas(n):
 
 
 def sum_series(n, m=0, o=1):
-    """Return a fibonacci sequence starting at n"""
+    """Return the nth number of an arbitrary Fibonacci-style sequence."""
     series = []
     for i in range(n):
         if i == 0:
@@ -37,3 +37,8 @@ def sum_series(n, m=0, o=1):
         else:
             series.append(series[i - 2] + series[i - 1])
     return series[-1]
+
+if __name__ == '__main__':
+    print('fibonacci(n): \n' + fibonacci.__doc__ + '\n fibonacci(7): ' + str(fibonacci(7)) + '\n')
+    print('lucas(n): \n' + lucas.__doc__ + '\n lucas(4): ' + str(lucas(4)) + '\n')
+    print('sum_series(n, m, o): \n' + sum_series.__doc__ + '\n sum_series(4, 1, 3): ' + str(sum_series(4, 1, 3)) + '\n')

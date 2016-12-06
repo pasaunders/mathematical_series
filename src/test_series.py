@@ -21,4 +21,5 @@ PARAMS_TABLE_LUCAS = []
 @pytest.mark.parametrize("m, n, result", PARAMS_TABLE_FIBONACCHI)
 def test_fibonacchi(m, n, result):
     """M and N should add up to result to create a fibbonachi sequence."""
+    from series import fibonacci
     assert m + n == result
